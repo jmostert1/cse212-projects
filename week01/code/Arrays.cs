@@ -23,7 +23,7 @@ public static class Arrays
             multi[i] = number * (i+1);
         }
 
-        return multi; // replace this return statement with your own
+        return multi; //return the new list
     }
 
     /// <summary>
@@ -43,9 +43,9 @@ public static class Arrays
         //using GetRange method
         //get num elements in list
         int count = data.Count;
-
         amount = amount % count;  // Normalize rotations if amount > count (work the index in the list, cant go over)
-                                  // Get last amount elements
+
+        // Get last amount elements
         var tail = data.GetRange(count - amount, amount);
         // Remove last amount elements from original list
         data.RemoveRange(count - amount, amount);
